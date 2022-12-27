@@ -3,15 +3,17 @@ import Image from "next/image";
 import { Caveat, Dosis } from "@next/font/google";
 
 const dosis = Dosis({ subsets: ["latin"] });
-const caveat = Caveat({ subsets: ["latin"]})
+const caveat = Caveat({ subsets: ["latin"] });
 
 import bg from "../public/bg.jpeg";
 import logo from "../public/avatar.jpg";
 
-import Menu from '../components/Menu';
-import About from '../components/About';
+import Menu from "../components/Menu";
+import About from "../components/About";
 
 import SocialMedia from "../components/SocialMedia";
+
+import styles from '../styles/main.module.css';
 
 export default function Home() {
   return (
@@ -24,10 +26,7 @@ export default function Home() {
       </Head>
       <main style={dosis.style}>
         <Menu font={caveat.style} />
-        <div
-          className="relative z-0 bg-cover bg-center bg-no-repeat py-8"
-          style={{ backgroundImage: `url(${bg.src})` }}
-        >
+        <div className={"relative z-0 bg-cover bg-center bg-no-repeat py-8 " + styles.bg}>
           <div className="absolute inset-0 z-20 bg-gradient-to-r from-indigo-600 to-violet-500 bg-cover bg-center bg-no-repeat opacity-90"></div>
 
           <div className="mx-auto container relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
@@ -44,7 +43,7 @@ export default function Home() {
                 <div className="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start">
                   <div className="flex items-center justify-center pl-0 sm:justify-start md:pl-1">
                     <p className="font-body text-lg uppercase text-white">
-                      Let's connect
+                      Let&apos;s connect
                     </p>
                     <div className="hidden sm:block">
                       <i className="bx bx-chevron-right text-3xl text-yellow"></i>

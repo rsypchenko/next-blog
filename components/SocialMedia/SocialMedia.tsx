@@ -10,15 +10,11 @@ export const SocialMedia = ({ primary }: Props) => {
 
   return (
     <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-      <a href="/">
-        <BsLinkedin className={`text-2xl ml-4 ${textColor} ${hoverColor}`} />
-      </a>
-      <a href="/">
-        <BsGithub className={`text-2xl ml-4 ${textColor} ${hoverColor}`} />
-      </a>
-      <a href="/">
-        <BsTwitter className={`text-2xl ml-4 ${textColor} ${hoverColor}`} />
-      </a>
+      <BsLinkedin className={`text-2xl ml-4 ${textColor} ${hoverColor}`} />
+
+      <BsGithub className={`text-2xl ml-4 ${textColor} ${hoverColor}`} />
+
+      <BsTwitter className={`text-2xl ml-4 ${textColor} ${hoverColor}`} />
     </div>
   );
 };

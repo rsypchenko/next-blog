@@ -10,7 +10,7 @@ export const About = () => {
             Who am I?
           </h2>
           <h4 className="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
-            I'm Roman Sypchenko, a Frontend Developer
+            I&apos;m Roman Sypchenko, a Frontend Developer
           </h4>
           <p className="pt-6 font-body leading-relaxed text-grey-20">
             As a senior frontend developer with over 8 years of experience, I am
