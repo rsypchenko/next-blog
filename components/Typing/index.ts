@@ -1,0 +1,1 @@
+export { TypingEffect as default } from './TypingEffect'
