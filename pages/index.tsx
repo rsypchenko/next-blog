@@ -1,11 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Caveat, Dosis } from "@next/font/google";
+import { Dosis } from "@next/font/google";
 
 const dosis = Dosis({ subsets: ["latin"] });
-const caveat = Caveat({ subsets: ["latin"] });
 
-import bg from "../public/bg.jpeg";
 import logo from "../public/avatar.jpg";
 
 import Menu from "../components/Menu";
@@ -25,7 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main style={dosis.style}>
-        <Menu font={caveat.style} />
+        <Menu />
         <div className={"relative z-0 bg-cover bg-center bg-no-repeat py-8 " + styles.bg}>
           <div className="absolute inset-0 z-20 bg-gradient-to-r from-indigo-600 to-violet-500 bg-cover bg-center bg-no-repeat opacity-90"></div>
 
@@ -36,7 +34,7 @@ export default function Home() {
                 className="h-56 w-56 border-8 object-cover rounded-full z-10 shadow-2xl"
                 alt="author"
               />
-              <div className="w-1/2 pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
+              <div className="w-full sm:w-1/2 pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
                 <h1 className="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl">
                   Hello, I am Frontend Developer
                 </h1>
