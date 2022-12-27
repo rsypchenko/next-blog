@@ -1,4 +1,5 @@
-import { BsTwitter, BsLinkedin, BsGithub } from "react-icons/bs";
+import SocialMedia from '../SocialMedia';
+import { Skills } from "./Skills";
 
 export const About = () => {
   return (
@@ -29,77 +30,10 @@ export const About = () => {
                 <i className="bx bx-chevron-right text-2xl text-primary"></i>
               </div>
             </div>
-            <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-              <a href="/">
-                <BsLinkedin className="text-2xl text-indigo-500 hover:text-indigo-800 ml-2" />
-              </a>
-              <a href="/">
-                <BsGithub className="text-2xl text-indigo-500 hover:text-indigo-800 ml-2" />
-              </a>
-              <a href="/">
-                <BsTwitter className="text-2xl text-indigo-500 hover:text-indigo-800 ml-2" />
-              </a>
-            </div>
+            <SocialMedia primary={false}/>
           </div>
         </div>
-        <div className="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
-          <div>
-            <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">
-                HTML &amp; CSS
-              </h4>
-              <h3 className="font-body text-3xl font-bold text-primary">85%</h3>
-            </div>
-            <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div
-                className="h-3 rounded-full bg-indigo-500"
-                style={{ width: "85%" }}
-              ></div>
-            </div>
-          </div>
-          <div className="pt-6">
-            <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">
-                JavaScript
-              </h4>
-              <h3 className="font-body text-3xl font-bold text-primary">70%</h3>
-            </div>
-            <div className="mt-2 h-3 w-full rounded-full">
-              <div
-                className="h-3 rounded-full  bg-indigo-500"
-                style={{ width: "70%" }}
-              ></div>
-            </div>
-          </div>
-          <div className="pt-6">
-            <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">
-                NodeJS
-              </h4>
-              <h3 className="font-body text-3xl font-bold text-primary">98%</h3>
-            </div>
-            <div className="mt-2 h-3 w-full rounded-full">
-              <div
-                className="h-3 rounded-full bg-indigo-500"
-                style={{ width: "98%" }}
-              ></div>
-            </div>
-          </div>
-          <div className="pt-6">
-            <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">
-                Figma
-              </h4>
-              <h3 className="font-body text-3xl font-bold text-primary">91%</h3>
-            </div>
-            <div className="mt-2 h-3 w-full rounded-full">
-              <div
-                className="h-3 rounded-full bg-indigo-500"
-                style={{ width: "91%" }}
-              ></div>
-            </div>
-          </div>
-        </div>
+       <Skills/>
       </div>
     </div>
   );

@@ -11,8 +11,7 @@ import logo from "../public/avatar.jpg";
 import Menu from '../components/Menu';
 import About from '../components/About';
 
-import { BsTwitter, BsLinkedin, BsGithub } from 'react-icons/bs';
-
+import SocialMedia from "../components/SocialMedia";
 
 export default function Home() {
   return (
@@ -51,17 +50,7 @@ export default function Home() {
                       <i className="bx bx-chevron-right text-3xl text-yellow"></i>
                     </div>
                   </div>
-                  <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-                    <a href="/">
-                      <BsLinkedin className="text-white text-2xl ml-4"/>
-                    </a>
-                    <a href="/">
-                      <BsGithub className="text-white text-2xl ml-4"/>
-                    </a>
-                    <a href="/">
-                      <BsTwitter className="text-white text-2xl ml-4"/>
-                    </a>
-                  </div>
+                  <SocialMedia primary={true} />
                 </div>
               </div>
             </div>
