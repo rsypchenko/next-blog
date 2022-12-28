@@ -11,7 +11,7 @@ export const Skills = () => {
   return (
     <div id="skills" className="container mx-auto py-16 md:py-20">
       <h2 className="text-center font-header text-3xl font-semibold uppercase text-indigo-500 sm:text-5xl lg:text-6xl">
-        Here's what I'm good at
+        Here&apos;s what I&apos;m good at
       </h2>
       <h3 className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
         These are the tech skills list
