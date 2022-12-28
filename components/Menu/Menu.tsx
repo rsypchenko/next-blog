@@ -1,6 +1,7 @@
 import logo from "../../public/logo.png";
 import Image from "next/image";
 import { MenuItem } from "./MenuItem";
+import { DownloadButton } from "./DownloadButton";
 
 export const Menu = () => {
   return (
@@ -9,18 +10,14 @@ export const Menu = () => {
         <Image src={logo} alt="logo" className="w-24" />
         <div className="hidden lg:block">
           <ul className="flex items-center">
-            <MenuItem text="About" />
-            <MenuItem text="Tech Skills" />
-            <MenuItem text="blog" />
-            <MenuItem text="Contact" />
+            <MenuItem linkTo={'#about'} text="About" />
+            <MenuItem linkTo={'#skills'} text="Tech Skills" />
+            <MenuItem linkTo={'#skills'} text="blog" />
+            <MenuItem linkTo={'#skills'} text="Contact" />
           </ul>
         </div>
 
-        <div className="flex">
-          <button className="text-white b-2 shadow-xl px-4 py-2 border-2 uppercase">
-            Download CV
-          </button>
-        </div>
+        <DownloadButton />
       </div>
     </div>
   );

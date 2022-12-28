@@ -3,7 +3,7 @@ import { Skills } from "./Skills";
 
 export const About = () => {
   return (
-    <div className="bg-grey-50">
+    <div id="about" className="bg-grey-50">
       <div className="container mx-auto flex flex-col items-center px-4 sm:px-0 py-16 md:py-20 lg:flex-row">
         <div className="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
           <h2 className="font-header text-4xl font-semibold uppercase text-indigo-600 sm:text-5xl lg:text-6xl">

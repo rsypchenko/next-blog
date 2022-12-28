@@ -8,6 +8,7 @@ import logo from "../public/avatar.jpg";
 
 import Menu from "../components/Menu";
 import About from "../components/About";
+import Skills from "../components/Skills";
 
 import SocialMedia from "../components/SocialMedia";
 
@@ -55,6 +56,8 @@ export default function Home() {
         </div>
 
         <About />
+
+        <Skills/>
       </main>
     </>
   );
