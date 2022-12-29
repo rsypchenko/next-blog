@@ -9,7 +9,8 @@ import logo from "../public/avatar.jpg";
 import Menu from "../components/Menu";
 import About from "../components/About";
 import Skills from "../components/Skills";
-
+import Contacts from "../components/Contacts";
+import Footer from "../components/Footer";
 import SocialMedia from "../components/SocialMedia";
 
 import styles from '../styles/main.module.css';
@@ -58,6 +59,10 @@ export default function Home() {
         <About />
 
         <Skills/>
+
+        <Contacts />
+
+        <Footer />
       </main>
     </>
   );

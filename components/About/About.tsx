@@ -16,8 +16,8 @@ export const About = () => {
             As a senior frontend developer with over 8 years of experience, I am
             skilled in building responsive and intuitive user interfaces for web
             and mobile applications. I have a strong understanding of modern
-            frontend technologies, including HTML, CSS, JavaScript, and various
-            frameworks such as React and Angular. I am also experienced in
+            frontend technologies, including HTML, CSS, JavaScript, TypeScript, and various
+            frameworks such as React and Vue. I am also experienced in
             working with designers and back-end developers to ensure seamless
             integration and delivery of high-quality products.
           </p>
