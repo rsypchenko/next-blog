@@ -27,7 +27,7 @@ export default function Home() {
       <main style={dosis.style}>
         <Menu />
         <div className={"relative z-0 bg-cover bg-center bg-no-repeat py-8 " + styles.bg}>
-          <div className="absolute inset-0 z-20 bg-gradient-to-r from-indigo-600 to-violet-500 bg-cover bg-center bg-no-repeat opacity-90"></div>
+          <div className="absolute inset-0 z-20 bg-gradient-to-r from-indigo-600 to-violet-500 bg-cover bg-center bg-no-repeat opacity-50"></div>
 
           <div className="mx-auto container relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
             <div className="flex flex-col items-center justify-center lg:flex-row">
