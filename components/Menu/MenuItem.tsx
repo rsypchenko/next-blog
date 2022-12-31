@@ -3,7 +3,7 @@ import Link from "next/link";
 export const MenuItem = ({ text, linkTo }: any) => {
   return (
     <li className="group pl-6">
-      <Link href={linkTo}>
+      <Link href={linkTo} scroll={false}>
         <span className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">
           {text}
         </span>

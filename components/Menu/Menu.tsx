@@ -12,7 +12,7 @@ export const Menu = () => {
           <Image src={logo} alt="logo" className="w-24" />
         </Link>
 
-        <div className="hidden">
+        <div className="hidden sm:block">
           <ul className="flex items-center">
             <MenuItem linkTo={"#about"} text="About" />
             <MenuItem linkTo={"#skills"} text="Tech Skills" />
