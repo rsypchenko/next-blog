@@ -8,7 +8,7 @@ interface Props {
 
 export const SkillsItem = ({ title, description, icon }: Props) => {
   return (
-    <div className="group rounded px-8 py-12 shadow-lg hover:shadow-xl transition-all hover:scale-110 hover:shadow-indigo-200">
+    <div className="group rounded px-8 py-12 shadow-lg hover:shadow-xl transition-all hover:scale-110">
       <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
         <div>
           <Image src={icon} alt="icon" />
