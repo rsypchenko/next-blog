@@ -9,13 +9,15 @@ import logo from "../public/avatar.jpg";
 import Menu from "../components/Menu";
 import About from "../components/About";
 import Skills from "../components/Skills";
-import Contacts from "../components/Contacts";
+// import Contacts from "../components/Contacts";
 import Footer from "../components/Footer";
 import SocialMedia from "../components/SocialMedia";
+import Blog from "../components/Blog/Blog";
 
 import styles from '../styles/main.module.css';
 
-export default function Home() {
+export default function Home({ posts }: any) {
+  console.log(posts)
   return (
     <>
       <Head>
@@ -60,10 +62,18 @@ export default function Home() {
 
         <Skills/>
 
-        <Contacts />
+        {/* <Contacts /> */}
+
+        <Blog posts={posts} />
 
         <Footer />
       </main>
     </>
   );
+}
+
+export async function getServerSideProps () {
+  const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@r.sipchenko')
+  const json = await res.json()
+  return { props: { posts: json.items } }
 }

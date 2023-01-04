@@ -16,8 +16,8 @@ export const Menu = () => {
           <ul className="flex items-center">
             <MenuItem linkTo={"#about"} text="About" />
             <MenuItem linkTo={"#skills"} text="Tech Skills" />
-            {/* <MenuItem linkTo={"#skills"} text="blog" /> */}
-            <MenuItem linkTo={"#contacts"} text="Contact" />
+            <MenuItem linkTo={"#blog"} text="blog" />
+            {/* <MenuItem linkTo={"#contacts"} text="Contact" /> */}
           </ul>
         </div>
 
