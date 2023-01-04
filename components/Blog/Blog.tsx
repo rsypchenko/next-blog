@@ -1,8 +1,8 @@
 import { BlogItem } from "./BlogItem";
 
-const Blog = ({ posts }: any) => {
+export const Blog = ({ posts }: any) => {
   if (!posts) return null;
-  
+
   return (
     <div className="bg-grey-50" id="blog">
       <div className="container mx-auto py-16 md:py-20">
@@ -13,13 +13,11 @@ const Blog = ({ posts }: any) => {
           Check out my latest posts!
         </h4>
         <div className="mx-auto grid w-full grid-cols-1 gap-6 pt-12 sm:w-3/4 lg:w-full lg:grid-cols-3 xl:gap-10">
-          {posts.map((post: any) => (
-            <BlogItem post={post} />
+          {posts.map((post: any, index: number) => (
+            <BlogItem key={index} post={post} />
           ))}
         </div>
       </div>
     </div>
   );
 };
-
-export default Blog;

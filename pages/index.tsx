@@ -12,12 +12,11 @@ import Skills from "../components/Skills";
 // import Contacts from "../components/Contacts";
 import Footer from "../components/Footer";
 import SocialMedia from "../components/SocialMedia";
-import Blog from "../components/Blog/Blog";
+import Blog from "../components/Blog";
 
 import styles from '../styles/main.module.css';
 
 export default function Home({ posts }: any) {
-  console.log(posts)
   return (
     <>
       <Head>
