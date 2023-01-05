@@ -1,11 +1,32 @@
+import React, { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 interface Props {
   skill: string;
   percentage: string;
 }
 
+const variants = {
+  visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
+  hidden: { opacity: 0, scale: 0 }
+};
+
 export const SkillsItem = ({ skill, percentage }: Props) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+  
   return (
-    <>
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={variants}
+    >
       <div className="flex items-end justify-between pt-6">
         <h4 className="font-body font-semibold uppercase text-black">
           {skill}
@@ -20,6 +41,6 @@ export const SkillsItem = ({ skill, percentage }: Props) => {
           style={{ width: percentage }}
         ></div>
       </div>
-    </>
+    </motion.div>
   );
 };
