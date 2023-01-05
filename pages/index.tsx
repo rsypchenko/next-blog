@@ -74,5 +74,6 @@ export default function Home({ posts }: any) {
 export async function getServerSideProps () {
   const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@r.sipchenko')
   const json = await res.json()
-  return { props: { posts: json.items } }
+  const posts = json?.items ?? null;
+  return { props: { posts } }
 }
