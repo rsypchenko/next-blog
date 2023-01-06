@@ -1,25 +1,30 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 interface Props {
   skill: string;
   percentage: string;
+  delay: number;
 }
 
 const variants = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
-  hidden: { opacity: 0, scale: 0 }
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, scale: 0 },
 };
 
-export const SkillsItem = ({ skill, percentage }: Props) => {
+export const SkillsItem = ({ skill, percentage, delay }: Props) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
+  const [width, setWidth] = useState(0);
+
   useEffect(() => {
     if (inView) {
       controls.start("visible");
+      const width = parseInt(percentage);
+      setWidth(width);
     }
   }, [controls, inView]);
-  
+
   return (
     <motion.div
       ref={ref}
@@ -36,10 +41,11 @@ export const SkillsItem = ({ skill, percentage }: Props) => {
         </h3>
       </div>
       <div className="mt-2 h-3 w-full rounded-full bg-slate-300">
-        <div
+        <motion.div
           className="h-3 rounded-full bg-indigo-500"
-          style={{ width: percentage }}
-        ></div>
+          animate={{ width: `${width}%` }}
+          transition={{ type: "spring", duration: 2, delay: 1 + delay }}
+        />
       </div>
     </motion.div>
   );
