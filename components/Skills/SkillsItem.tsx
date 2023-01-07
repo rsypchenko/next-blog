@@ -29,7 +29,7 @@ export const SkillsItem = ({ title, description, icon }: Props) => {
       animate={controls}
       initial="hidden"
       variants={variants}
-      className="group rounded px-8 py-12 shadow-lg hover:shadow-xl hover:scale-110"
+      className="group rounded px-8 py-12 shadow-lg"
     >
       <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
         <div>

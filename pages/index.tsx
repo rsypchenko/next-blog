@@ -2,6 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { Dosis } from "@next/font/google";
 
+import { motion } from "framer-motion";
+
 const dosis = Dosis({ subsets: ["latin"] });
 
 import logo from "../public/avatar.jpg";
@@ -9,12 +11,11 @@ import logo from "../public/avatar.jpg";
 import Menu from "../components/Menu";
 import About from "../components/About";
 import Skills from "../components/Skills";
-// import Contacts from "../components/Contacts";
 import Footer from "../components/Footer";
 import SocialMedia from "../components/SocialMedia";
 import Blog from "../components/Blog";
 
-import styles from '../styles/main.module.css';
+import styles from "../styles/main.module.css";
 
 export default function Home({ posts }: any) {
   return (
@@ -27,17 +28,48 @@ export default function Home({ posts }: any) {
       </Head>
       <main style={dosis.style}>
         <Menu />
-        <div className={"relative z-0 bg-cover bg-center bg-no-repeat py-8 " + styles.bg}>
+        <div
+          className={
+            "relative z-0 bg-cover bg-center bg-no-repeat py-8 " + styles.bg
+          }
+        >
           <div className="absolute inset-0 z-20 bg-gradient-to-r from-indigo-600 to-violet-500 bg-cover bg-center bg-no-repeat opacity-50"></div>
 
-          <div className="mx-auto container relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
-            <div className="flex flex-col items-center justify-center lg:flex-row">
-              <Image
-                src={logo}
-                className="h-56 w-56 border-8 object-cover rounded-full z-10 shadow-2xl"
-                alt="author"
-              />
-              <div className="w-full sm:w-1/2 pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
+          <div className="mx-auto container relative z-20 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
+            <div className="relative flex flex-col items-center justify-center lg:flex-row">
+              <motion.div
+                className="relative h-56 w-56 border-8 z-30 rounded-full overflow-hidden"
+                animate={{
+                  scale: [1, 1.2, 1],
+                }}
+                transition={{
+                  duration: 2,
+                  ease: "easeInOut",
+                  times: [0, 0.2, 0.5],
+                  delay: 2,
+                }}
+              >
+                <Image
+                  src={logo}
+                  className="absolute h-56 w-full object-cover z-10"
+                  alt="author"
+                />
+              </motion.div>
+
+              <motion.div
+                animate={{
+                  scale: [1, 1.2, 1],
+                  borderRadius: ["0%", "0%", "100%"],
+                  x: ["2000px", "0px", "0px"],
+                }}
+                transition={{
+                  duration: 2,
+                  ease: "easeInOut",
+                  times: [0, 0.2, 0.5],
+                  delay: 1
+                }}
+                className="w-full sm:w-1/2 pt-8 sm:pt-10 lg:pl-8 lg:pt-0"
+              >
                 <h1 className="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl">
                   Hello, I am Frontend Developer
                 </h1>
@@ -52,16 +84,14 @@ export default function Home({ posts }: any) {
                   </div>
                   <SocialMedia primary={true} />
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
 
         <About />
 
-        <Skills/>
-
-        {/* <Contacts /> */}
+        <Skills />
 
         <Blog posts={posts} />
 
@@ -71,9 +101,11 @@ export default function Home({ posts }: any) {
   );
 }
 
-export async function getServerSideProps () {
-  const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@r.sipchenko')
-  const json = await res.json()
+export async function getServerSideProps() {
+  const res = await fetch(
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@r.sipchenko"
+  );
+  const json = await res.json();
   const posts = json?.items ?? null;
-  return { props: { posts } }
+  return { props: { posts } };
 }
