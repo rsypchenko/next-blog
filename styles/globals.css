@@ -5,3 +5,7 @@
 html {
   scroll-behavior: smooth;
 }
+.svg-container {
+  stroke: #FFFFFF;
+  stroke-width: 10px;
+}

@@ -1,13 +1,56 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+const outlineVariants = {
+  default: {
+    strokeWidth: 0,
+    pathLength: 0,
+    stroke: "FFFFFF",
+    transition: { duration: 1, ease: "easeOut" },
+  },
+  initial: {
+    strokeWidth: 2,
+    pathLength: 1,
+    stroke: "#FFFFFF",
+    transition: { duration: 1, ease: "easeOut", delay: 1 },
+  },
+};
+
+const buttonVariants = {
+  default: {
+    scale: 1,
+  },
+  hover: {
+    scale: 1.1,
+  },
+};
 
 export const DownloadButton = () => {
   return (
-    <div className="flex">
+    <motion.div
+      whileHover="hover"
+      initial="default"
+      animate="initial"
+      className="text-white uppercase relative w-44"
+      variants={buttonVariants}
+    >
       <Link href="/cv.pdf" legacyBehavior>
-        <a target={'_blank'} className="text-white b-2 rounded-sm shadow-xl px-4 py-2 border-2 uppercase hover:bg-violet-500 hover:rounded-xl hover:scale-110 transition-all">
+        <a
+          target={"_blank"}
+          className="absolute top-1 inset-0 z-10 w-full h-full text-center select-none"
+        >
           Download CV
         </a>
       </Link>
-    </div>
+      <motion.svg viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
+        <motion.path
+          variants={outlineVariants}
+          strokeWidth="1"
+          fill="none"
+          stroke="grey"
+          d="M 0, 0 H 100 V 20 H 0 Z"
+        />
+      </motion.svg>
+    </motion.div>
   );
 };

@@ -12,7 +12,11 @@ import Blog from "../components/Blog";
 
 import styles from "../styles/main.module.css";
 
-export default function Home({ posts }: any) {
+interface Props {
+  posts: Array<any>;
+}
+
+export default function Home({ posts }: Props) {
   return (
     <>
       <Head>
@@ -25,7 +29,7 @@ export default function Home({ posts }: any) {
         <Menu />
         <div
           className={
-            "relative z-0 bg-cover bg-center bg-no-repeat py-8 " + styles.bg
+            "relative h-screen sm:h-auto z-0 bg-cover bg-center bg-no-repeat py-8 " + styles.bg
           }
         >
           <div className="absolute inset-0 z-20 bg-gradient-to-r from-indigo-600 to-violet-500 bg-cover bg-center bg-no-repeat opacity-50"></div>
