@@ -23,7 +23,7 @@ export const SkillsItem = ({ skill, percentage, delay }: Props) => {
       const width = parseInt(percentage);
       setWidth(width);
     }
-  }, [controls, inView]);
+  }, [controls, inView, percentage]);
 
   return (
     <motion.div

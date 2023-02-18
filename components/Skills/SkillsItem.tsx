@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const variants = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-  hidden: { opacity: 0, scale: 0 },
+  visible: { opacity: [0,1], scale: [0,1], transition: { duration: 0.5 } },
+  initial: { opacity: 1, scale: 1 },
+  hover: { scale: 1.1, transition: { duration: 0.3 } },
 };
 interface Props {
   title: string;
@@ -27,9 +28,10 @@ export const SkillsItem = ({ title, description, icon }: Props) => {
     <motion.div
       ref={ref}
       animate={controls}
-      initial="hidden"
+      initial="initial"
+      whileHover="hover"
       variants={variants}
-      className="group rounded px-8 py-12 shadow-lg"
+      className="group rounded px-8 py-12 shadow-lg cursor-pointer"
     >
       <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
         <div>
