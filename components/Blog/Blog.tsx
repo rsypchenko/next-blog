@@ -1,14 +1,17 @@
 import { BlogItem } from "./BlogItem";
 
-export const Blog = ({ posts }: any) => {
+export const Blog = ({ title, main, posts }: any) => {
   if (!posts) return null;
 
   return (
     <div className="bg-grey-50" id="blog">
       <div className="container mx-auto py-16 md:py-20">
-        <h2 className="text-center font-header text-4xl font-semibold uppercase text-indigo-500 sm:text-5xl lg:text-6xl">
-          I also like to write
-        </h2>
+        {main && (
+          <h2 className="text-center font-header text-4xl font-semibold uppercase text-indigo-500 sm:text-5xl lg:text-6xl">
+            {title ? title : "I also like to write"}
+          </h2>
+        )}
+
         <h4 className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
           Check out my latest posts!
         </h4>
