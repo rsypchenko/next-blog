@@ -9,10 +9,10 @@ interface Props {
 }
 
 export const Menu = ({ secondary }: Props) => {
-  const color = secondary ? "bg-cyan-500" : "bg-transparent";
+  const bg = secondary ? "inset-0 z-20 bg-gradient-to-r from-indigo-600 to-violet-500 opacity-100" : "bg-transparent";
 
   return (
-    <div className={`w-full z-50 top-0 py-3 px-5 sm:py-5 absolute ${color}`}>
+    <div className={`w-full z-50 top-0 py-3 px-5 sm:py-5 absolute ${bg} h-32`}>
       <div className="flex container mx-auto items-center justify-between">
         <Link href="/">
           <Image src={logo} alt="logo" className="w-24" />

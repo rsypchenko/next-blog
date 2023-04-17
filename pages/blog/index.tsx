@@ -25,7 +25,7 @@ export default function Home({ posts }: Props) {
 
         <Blog title={'Blog'} posts={posts} />
 
-        <Footer secondary />
+        <Footer />
       </main>
     </>
   );

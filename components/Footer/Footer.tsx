@@ -1,13 +1,8 @@
 import SocialMedia from "../SocialMedia";
-interface Props {
-  secondary?: boolean;
-}
 
-export const Footer = ({ secondary }: Props) => {
-  const color = secondary ? "bg-cyan-500" : "bg-indigo-500";
-
+export const Footer = () => {
   return (
-    <div className={color}>
+    <div className={'inset-0 z-20 bg-gradient-to-r from-indigo-600 to-violet-500 opacity-100'}>
       <div className="container mx-auto flex flex-col justify-between py-6 sm:flex-row">
         <p className="text-center text-white md:text-left">
           © Copyright {new Date().getFullYear()}. All right reserved.
