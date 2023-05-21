@@ -10,6 +10,8 @@ import Skills from "../components/Skills";
 import Footer from "../components/Footer";
 import Blog from "../components/Blog";
 
+import Layout from "../components/Layout";
+
 import styles from "../styles/main.module.css";
 
 interface Props {
@@ -18,7 +20,7 @@ interface Props {
 
 export default function Home({ posts }: Props) {
   return (
-    <>
+    <Layout>
       <Head>
         <title>RS - Frontend</title>
         <meta name="description" content="RS - Frontend" />
@@ -46,7 +48,7 @@ export default function Home({ posts }: Props) {
 
         <Footer />
       </main>
-    </>
+    </Layout>
   );
 }
 

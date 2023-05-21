@@ -6,6 +6,7 @@ const dosis = Dosis({ subsets: ["latin"] });
 import Footer from "../../components/Footer";
 import Blog from "../../components/Blog";
 import Menu from "../../components/Menu";
+import Layout from "../../components/Layout";
 
 interface Props {
   posts: Array<any>;
@@ -13,7 +14,7 @@ interface Props {
 
 export default function Home({ posts }: Props) {
   return (
-    <>
+    <Layout>
       <Head>
         <title>RS - Frontend</title>
         <meta name="description" content="RS - Frontend" />
@@ -27,7 +28,7 @@ export default function Home({ posts }: Props) {
 
         <Footer />
       </main>
-    </>
+    </Layout>
   );
 }
 
