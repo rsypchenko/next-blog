@@ -4,7 +4,7 @@ import { MenuItem } from "./MenuItem";
 import { DownloadButton } from "./DownloadButton";
 import Link from "next/link";
 
-import { useScrollspy } from "./useScrollSpy";
+import { useScrollspy } from "./useScrollspy";
 import { useEffect } from "react";
 
 interface Props {
