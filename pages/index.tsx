@@ -29,12 +29,8 @@ export default function Home({ posts }: Props) {
       </Head>
       <main style={dosis.style}>
         <Menu />
-        <div
-          className={
-            "relative h-screen sm:h-auto z-0 bg-cover bg-center bg-no-repeat py-8 " + styles.bg
-          }
-        >
-          <div className="absolute inset-0 z-20 bg-gradient-to-r from-indigo-600 to-violet-500 bg-cover bg-center bg-no-repeat opacity-50"></div>
+        <div className={styles.background}>
+          {/* <div className="absolute inset-0 z-20 bg-gradient-to-r from-indigo-600 to-violet-500 bg-cover bg-center bg-no-repeat opacity-50"></div> */}
           <div className="mx-auto container relative z-20 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
             <Main />
           </div>
