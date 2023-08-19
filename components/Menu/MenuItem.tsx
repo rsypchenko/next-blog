@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./menu.module.css";
 
-export const MenuItem = ({ text, linkTo }: any) => {
+export const MenuItem = ({ name, text, linkTo }: any) => {
   return (
     <li
       className={`group ml-10 font-header font-semibold uppercase text-white ${styles.link} pt-0.5`}

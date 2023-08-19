@@ -37,7 +37,7 @@ export const DownloadButton = () => {
       <Link href="/cv.pdf" legacyBehavior>
         <a
           target={"_blank"}
-          className="absolute top-1 inset-0 z-10 w-full h-full text-center select-none"
+          className="absolute top-1.5 inset-0 z-10 w-full h-full text-center select-none"
         >
           Download CV
         </a>

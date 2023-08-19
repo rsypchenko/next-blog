@@ -166,3 +166,15 @@
     fill: #ffffff;
     enable-background: new;
   }
+
+@media screen and (max-width: 768px) {
+  .background {
+    min-height: calc(100vh);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .background {
+    min-height: calc(100vh);
+  }
+}

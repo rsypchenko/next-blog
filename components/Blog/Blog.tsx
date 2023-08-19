@@ -5,7 +5,7 @@ export const Blog = ({ title, main, posts }: any) => {
 
   return (
     <div className="bg-grey-50" id="blog">
-      <div className="container mx-auto py-16 md:py-20">
+      <div className="container mx-auto py-16 md:py-20 md:mb-20">
         {main && (
           <h2 className="text-center font-header text-4xl font-semibold uppercase text-indigo-500 sm:text-5xl lg:text-6xl">
             {title ? title : "I also like to write"}

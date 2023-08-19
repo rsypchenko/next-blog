@@ -30,7 +30,7 @@
   align-items: stretch;
   justify-content: space-evenly;
   overflow: hidden;
-  position: relative;
+  position: absolute;
 }
 
 .background::before,

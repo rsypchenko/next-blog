@@ -14,6 +14,10 @@ import Layout from "../components/Layout";
 
 import styles from "../styles/main.module.css";
 
+import flow from '../components/ui/flow.svg';
+
+import Image from  "next/image";
+
 interface Props {
   posts: Array<any>;
 }
@@ -34,13 +38,14 @@ export default function Home({ posts }: Props) {
           <div className="mx-auto container relative z-20 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
             <Main />
           </div>
+          {/* <Image src={flow} /> */}
         </div>
 
         <About />
 
         <Skills />
 
-        <Blog posts={posts} />
+        <Blog posts={posts} main />
 
         <Footer />
       </main>
