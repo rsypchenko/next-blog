@@ -32,7 +32,7 @@ export const WhoAmI = () => {
         I&apos;m Roman Sypchenko, a Frontend Developer
       </h4>
       <p className="pt-6 font-body leading-relaxed text-grey-20">
-        As a senior frontend developer with 8+ years of experience, I am
+        As a senior frontend developer with 10+ years of experience, I am
         skilled in building responsive and intuitive user interfaces for web and
         mobile applications. I have a strong understanding of modern frontend
         technologies, including HTML, CSS, JavaScript, TypeScript, and various
