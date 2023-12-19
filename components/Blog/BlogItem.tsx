@@ -41,11 +41,11 @@ export const BlogItem = ({ post }: Props) => {
     >
       <div className="group relative h-72">
         <div className="relative overflow-hidden">
-          <img
+          {/* <img
             src={post.image}
             alt="image"
             className="h-72 w-full object-cover hover:scale-110 ease-in-out duration-300"
-          />
+          /> */}
         </div>
 
         {/* <span className="absolute inset-0 block bg-gradient-to-b from-indigo-800 to-indigo-500 bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"></span> */}
