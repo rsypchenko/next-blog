@@ -45,7 +45,7 @@ export default function Home({ posts }: Props) {
 
         <Skills />
 
-        <Blog posts={posts} main />
+        {/* <Blog posts={posts} main /> */}
 
         <Footer />
       </main>

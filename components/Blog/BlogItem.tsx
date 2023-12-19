@@ -20,6 +20,8 @@ export const BlogItem = ({ post }: Props) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
+  console.log(post);
+
   useEffect(() => {
     if (inView) {
       controls.start("visible");
@@ -40,7 +42,7 @@ export const BlogItem = ({ post }: Props) => {
       <div className="group relative h-72">
         <div className="relative overflow-hidden">
           <img
-            src={post.thumbnail}
+            src={post.image}
             alt="image"
             className="h-72 w-full object-cover hover:scale-110 ease-in-out duration-300"
           />

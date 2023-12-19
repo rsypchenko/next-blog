@@ -32,7 +32,7 @@ export const Menu = ({ secondary }: Props) => {
           <ul className="flex items-center">
             <MenuItem linkTo={"#about"} text="About" />
             <MenuItem linkTo={"#skills"} text="Tech Skills" />
-            <MenuItem linkTo={"#blog"} text="Blog" />
+            {/* <MenuItem linkTo={"#blog"} text="Blog" /> */}
             {/* <MenuItem linkTo={"#contacts"} text="Contact" /> */}
           </ul>
         </div>
