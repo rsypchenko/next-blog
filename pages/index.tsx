@@ -27,7 +27,7 @@ export default function Home({ posts }: Props) {
     <Layout>
       <Head>
         <title>FrontendStackLab</title>
-        <meta name="description" content="Welcome to FrontendStackLab.com – your ultimate destination for mastering front-end development. Explore the latest trends, best practices, and innovative tools in the world of front-end technology. Start your journey to front-end excellence with us today!" />
+        <meta name="description" content="Welcome to FrontendStackLab your ultimate destination for mastering front-end development. Explore the latest trends, best practices, and innovative tools in the world of front-end technology. Start your journey to front-end excellence with us today!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
