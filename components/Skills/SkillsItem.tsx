@@ -42,7 +42,7 @@ export const SkillsItem = ({ title, description, icon }: Props) => {
         <h3 className="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">
           {title}
         </h3>
-        <p className="text-grey pt-4">{description}</p>
+        <p className="text-gray-500 pt-4">{description}</p>
       </div>
     </motion.div>
   );

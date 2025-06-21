@@ -47,7 +47,7 @@ export const DownloadButton = () => {
           variants={outlineVariants}
           strokeWidth="1"
           fill="none"
-          stroke="grey"
+          stroke="gray"
           d="M 0, 0 H 100 V 20 H 0 Z"
         />
       </motion.svg>

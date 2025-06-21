@@ -31,7 +31,7 @@ export const WhoAmI = () => {
       <h4 className="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
         I&apos;m Roman Sypchenko, a Frontend Developer
       </h4>
-      <p className="pt-6 font-body leading-relaxed text-grey-20">
+      <p className="pt-6 font-body leading-relaxed text-gray-200">
         As a senior frontend developer with 10+ years of experience, I am
         skilled in building responsive and intuitive user interfaces for web and
         mobile applications. I have a strong understanding of modern frontend
@@ -42,7 +42,7 @@ export const WhoAmI = () => {
       </p>
       <div className="flex flex-col justify-center pt-6 sm:flex-row lg:justify-start">
         <div className="flex items-center justify-center sm:justify-start">
-          <p className="font-body text-lg font-semibold uppercase text-grey-20">
+          <p className="font-body text-lg font-semibold uppercase text-gray-200">
             Connect with me
           </p>
           <div className="hidden sm:block">

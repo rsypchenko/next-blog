@@ -57,11 +57,11 @@ export const BlogItem = ({ post }: Props) => {
         <span className="block font-body text-lg font-semibold text-black">
           {post.title}
         </span>
-        <div className="block pt-2 font-body text-grey-20">
+        <div className="block pt-2 font-body text-gray-200">
           {post.categories.map((category: string) => (
             <span
               key={category}
-              className="inline-block bg-grey-50 rounded-full border-2 px-3 py-1 text-sm font-semibold text-grey-20 mr-2 mb-2"
+              className="inline-block bg-gray-50 rounded-full border-2 px-3 py-1 text-sm font-semibold text-gray-200 mr-2 mb-2"
             >
               {category}
             </span>
